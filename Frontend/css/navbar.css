@@ -1,0 +1,418 @@
+*{
+    font-family: sans-serif;
+}
+#navbar{
+    border: 1px solid black;
+    height: 130px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#logo_img{
+    height: 100%;
+}
+#logo_nav{
+    height: 60%;
+    border: 1px solid;
+    text-align: center;
+}
+#search_nav{
+    border: 0px solid blue;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    /*category hamberger  */
+}
+#hamberger_div{
+    width: 15%;
+    border: 1px solid;
+    height: 90%;
+
+}
+#search_inp{
+    width: 48%;
+    border: 1px solid;
+    height: 90%;
+}
+#order_div{
+    width:35%;
+    border: 1px solid;
+    height: 90%;
+}
+#hamberger_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+}
+#hamberger_div i{
+margin-top: 10px;
+}
+#cat_links{
+    margin-top: 50px;
+    width: 350%;
+    display: none;
+    position: absolute;
+    background-color:white
+}
+
+#cat_links a button{
+    background: none;
+    color: rgb(23, 24, 24);
+    font-size: larger;
+    border: 0px;
+}
+#cat_links a button:hover{
+    cursor: pointer;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hamberger_div a.icon {
+    background:white;
+    color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* seach and input of nav */
+  #search_inp{
+    display: flex;
+  }
+  #inp{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #inp input{
+    width: 95%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #search_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(228, 104, 58);
+  }
+#inp_search_inp{
+    text-align: center;
+    border: 0px;
+}
+#order_div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#myorders{
+    width: 31%;
+    height: 88%;
+    border: 1px solid;
+}
+#cart_value{
+    width: 31%;
+    height: 88%;
+    border: 1px solid;
+
+}
+#sign_login{
+    width: 31%;
+    height: 88%;
+    border: 1px solid;
+}
+#slider_div{
+
+    height: 500px;
+    width: 100%;
+    border: 1px solid;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around
+}
+#slider_one{
+    width: 90%;
+    margin: auto;
+   height: 31%;
+   border: 0px solid;
+   display: grid;
+   grid-template-columns: repeat(9,1fr);
+}
+#slider_one div{
+    border: 0px solid;
+}
+#slider_two{
+    width: 90%;
+    margin: auto;
+    height: 31%;
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+ }
+ #slider_two div{
+    border: 0px solid;
+}
+ #slider_three{
+    width: 90%;
+    margin: auto;
+    height: 31%;
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+ }
+ #slider_three div{
+    border: 0px solid;
+}
+ #img_slider{
+    height: 77%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #img_slider img{
+    border-radius: 50%;
+    height: 70%;
+    width: 70%;
+ }
+ #img_title{
+    height: 20%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ /* Grocery Div */
+ #Grocery_slider_div{
+    width: 90%;
+    margin: auto;
+    height: 550px;
+    border: 0px solid red;
+    margin-top: 10px;
+ }
+ #Grocery_slider_div_headers{
+    height: 13%;
+    border: 0px solid;
+    text-align: center;
+ }
+ #Grocery_slider_div_sliders{
+    height: 83%;
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+    border: 0px solid;
+ }
+ #grocery_div_sli{
+    display: flex;
+    flex-direction: column;
+    border: 0px solid blue;
+ }
+ #slider_pic{
+    border: 0px solid;
+    height: 85%;
+ }
+ #slider_pic img{
+    width: 80%;
+    height: 80%;
+ }
+ #slider_title{
+    border: 0px solid green;
+    height: 15%;
+    text-align: center;
+ }
+ /* jwellary Div */
+ #jwellary_slider_div{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    height: 550px;
+    border: 0px solid red;
+    margin-top: 10px;
+ }
+
+ /* About */
+ .about{
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+ }
+ ._2joD{
+    color: grey;
+ }
+ /* Help And contact */
+ #help_about{
+    height: 250px;
+    width: 90%;
+    margin: auto;
+    border: 0px solid red;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    text-align: center;
+}
+#help_child_div{
+    border: 0px solid;
+    display: flex;
+    flex-direction: column;
+}
+#help_icon{
+    height: 25%;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#help_title{
+    color: gray;
+    height: 25%;
+    border: 0px solid;
+}
+#help_para{
+    color: gray;
+    height: 50%;
+    border: 0px solid;
+}
+.fa-solid {
+    color: gray;
+}
+
+/* Footer Div */
+#footer_div{
+    margin-top: 10px;
+    height: 340px;
+    border:50x solid red
+}
+#footer{
+    height: 100%;
+    width: 95%;
+    border:30x solid purple;
+    margin: auto;
+}
+#footer_nav{
+    height: 12%;
+    width: 100%;
+    margin: auto;
+    border:10x solid blue;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+#btn_t_ft{
+    width: 70%;
+    border: 0px solid red;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#btn_t_ft button{
+    background: transparent;
+    border: 0px;
+    color: orangered;
+    font-size: 13px;
+    white-space: nowrap;
+}
+#icons_t_ft{
+    width:30% ;
+    border: 0px solid blue;
+    height: 100%;
+    text-align: right;
+    display: flex;
+     justify-content: right;
+    align-items: center;
+}
+#real_btns{
+    width: 50%;
+    border: 0px solid;
+    text-align: right;
+    display: flex;
+    justify-content: space-around;
+}
+#real_btns i{
+    color: rgb(240, 101, 50);
+}
+#cards_nav{
+    height: 15%;
+    width: 100%;
+    margin: auto;
+    border: 0px solid orangered;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#payment_logo{
+    width: 40%;
+    border: 0px solid purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#payment_logo img{
+    width: 90%;
+  
+}
+#ftr_admn{
+    width: 20%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer_btns{
+    height: 63%;
+    margin: auto;
+    border: 0px solid yellowgreen;
+    margin-top: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#p_div{
+    height: 15%;
+    border: 0px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-weight: bolder;
+}
+#btns_ft_div{
+    height: 80%;
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#abc{
+    border: 0px solid purple;
+    display: grid;
+    grid-template-rows: repeat(3.1fr);
+}
+#abc div{
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#abc div button{
+    height: 60%;
+    border: 0px;
+    background: transparent;
+
+}
+#abc div button i{
+    color: black;
+    margin-left: 5px;
+}
