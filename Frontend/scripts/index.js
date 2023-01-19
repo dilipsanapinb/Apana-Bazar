@@ -19,9 +19,16 @@ function myhambFunction() {
     }
   }
 
-  //login page functionality
+  //signup page functionality
 
-  let login_btn=document.getElementById("login_page");
-  login_btn.onclick=()=>{
+  let signup_btn=document.getElementById("signup_page");
+  signup_btn.onclick=()=>{
     window.location.href="signup.html"
   }
+
+    //login page functionality
+
+    let login_btn=document.getElementById("login_page");
+    login_btn.onclick=()=>{
+      window.location.href="signin.html"
+    }

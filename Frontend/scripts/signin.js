@@ -38,3 +38,9 @@ async function logfunct(event){
         console.log(error);
     }
 }
+
+// connect_link
+let connect_link=document.getElementById("join_us_btn");
+connect_link.onclick=()=>{
+    window.location.href="signup.html"
+}
