@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+        crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <div class="navbar">
+    </div>
+    <div id="container">
+        <div id="register" class="animate form">
+            <form autocomplete="on">
+                <h1> Sign up </h1>
+                <hr>
+                <p>
+                    <label for="fisrstnamesignup" class="youfname"  >FirstName</label>
+                    <input class="input_tag"  id="firstname"  required="required" type="text" placeholder="eg.Dilip"/>
+                </p>
+                <p>
+                    <label for="lastnameignup" class="youlastname"  >LastName</label>
+                    <input class="input_tag" id="lastname"  required="required" type="text" placeholder="eg.Sanap"/>
+                </p>
+                <p>
+                    <label for="emailsignup" class="youmail" >Your email</label>
+                    <input class="input_tag" id="email"  required="required" type="email" placeholder="eg.dili@gmail.com"/>
+                </p>
+                <p>
+                    <label for="passwordsignup" class="youpasswd" >Your password </label>
+                    <input class="input_tag" id="password"  required="required" type="password" placeholder="eg.eg.dilip1234"/>
+                </p>
+                <p>
+                    <label for="gendersignup" class="youpasswd" >Your Gender </label>
+                    <select style="width: 40%;border-radius: 6px;" name="" id="gender">
+                        <option value="">Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Femal</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </p>
+                <p class="signup button">
+                    <input id="signup_btn" type="submit" value="Sign up"/>
+                </p>
+                <hr>
+                <div id="bottom_div">  
+                    <div id="join_us_div">
+                        <h5> Already a member ?  <button id="join_us_btn">Go to log in</button></h5>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer_div">
+
+    </div>
+</body>
+</html>
+<script type="module" src="./scripts/signup.js"></script>

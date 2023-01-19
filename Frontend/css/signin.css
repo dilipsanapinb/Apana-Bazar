@@ -1,0 +1,103 @@
+*{
+    font-family: sans-serif;
+}
+.container{
+    border: 1px solid ;
+    border-radius: 10px;
+    width: 35%;
+    height: 350px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#heading{
+    height: 20%;
+    border: 0px solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#heading h1{
+    color:teal;
+    font-weight: bold;
+}
+#email_div{
+    height: 20%;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    margin-left: 17%;
+    flex-direction: column;
+}
+#email_div input{
+    width: 80%;
+    height: 40%;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+#pass_div{
+    height: 20%;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    margin-left: 17%;
+    flex-direction: column;
+}
+#pass_div input{
+    width: 80%;
+    height: 40%;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+#log_btn{
+    height: 20%;
+    border: 0px solid;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#log_btn button{
+    width:40%;
+    height: 60%;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0px;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+#botton_div{
+    height: 20%;
+    border: 0px solid;
+    display: flex;
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+}
+#botton_div div{
+    border: 0px solid;
+}
+#join_us{
+    width: 60%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#join_us_div{
+    width: 140%;
+    display: flex;
+justify-content: right;
+align-items: center;
+}
+#join_us_btn{
+    border-radius: 6px;
+    border: 0px;
+    width: 60%;
+    height: 40%;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}

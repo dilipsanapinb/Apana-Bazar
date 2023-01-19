@@ -1,5 +1,5 @@
 const express=require("express");
-const {ProductModel}=require("../models/car.model");
+const {ProductModel}=require("../models/paytm.product");
 const productRouter=express.Router();
 productRouter.use(express.json())
 

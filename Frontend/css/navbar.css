@@ -2,7 +2,7 @@
     font-family: sans-serif;
 }
 #navbar{
-    border: 1px solid black;
+    border: 0px solid black;
     height: 130px;
     width: 100%;
     margin-top: 30px;
@@ -14,7 +14,7 @@
 }
 #logo_nav{
     height: 60%;
-    border: 1px solid;
+    border: 0px solid;
     text-align: center;
 }
 #search_nav{
@@ -26,22 +26,147 @@
 
     /*category hamberger  */
 }
+#search_nav:hover{
+    cursor: pointer;
+}
 #hamberger_div{
     width: 15%;
-    border: 1px solid;
+    border: 1px solid gray;
     height: 90%;
-
+}
+#hamberger_div:hover{
+    cursor: pointer;
 }
 #search_inp{
     width: 48%;
     border: 1px solid;
     height: 90%;
 }
+#search_inp:hover{
+    cursor: pointer;
+}
 #order_div{
     width:35%;
-    border: 1px solid;
+    border: 0px ;
     height: 90%;
 }
+#myorders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#orders_btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    border: 0px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#orders_btn i{
+    color: #DD0285;
+}
+#orders_btn i:hover{
+    color: #f9f9f9;
+}
+#orders_btn:hover{
+    cursor: pointer;
+    background-color: #DD0285;
+    color: #f9f9f9;
+}
+#cart_value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#my_cart_btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    border: 0px;
+    font-weight: bold
+}
+#my_cart_btn:hover{
+    background-color: #DD0285;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+#my_cart_btn i:hover{
+    background-color: #DD0285;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+#cart_value:hover{
+    background-color: #DD0285;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+#myCartPrice{
+    white-space: nowrap;
+}
+/* dropdown of register */
+
+#btn3{
+    width: 40%;
+    height:70% ;
+    border: transparent;
+    font-size: 16px;
+    background-color: transparent;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#btn3_div{
+    position: relative;
+  display: inline-block;
+  display: flex;
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  #admin_name{
+
+  }
+  .dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  #btn3_div:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover #btn3 {
+    background-color: #3e8e41;
+  }
+  .dropdown-content>button{
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+  }
+  .dropdown-content>button:hover{
+    background-color: #DD0285;
+    color: white;
+    font-weight: bold;
+  }
+#dropdowndon-content-navbar-btn_div{
+    position: relative;
+    display: flex;
+}
+/* dropdown ends */
 #hamberger_div{
     display: flex;
     align-items: center;
@@ -118,178 +243,28 @@ margin-top: 10px;
 #myorders{
     width: 31%;
     height: 88%;
-    border: 1px solid;
+    border: 0px solid;
 }
 #cart_value{
     width: 31%;
     height: 88%;
-    border: 1px solid;
+    border: 0px solid;
 
 }
 #sign_login{
     width: 31%;
     height: 88%;
-    border: 1px solid;
-}
-#slider_div{
-
-    height: 500px;
-    width: 100%;
-    border: 1px solid;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around
-}
-#slider_one{
-    width: 90%;
-    margin: auto;
-   height: 31%;
-   border: 0px solid;
-   display: grid;
-   grid-template-columns: repeat(9,1fr);
-}
-#slider_one div{
-    border: 0px solid;
-}
-#slider_two{
-    width: 90%;
-    margin: auto;
-    height: 31%;
-    border: 0px solid;
-    display: grid;
-    grid-template-columns: repeat(9,1fr);
- }
- #slider_two div{
-    border: 0px solid;
-}
- #slider_three{
-    width: 90%;
-    margin: auto;
-    height: 31%;
-    border: 0px solid;
-    display: grid;
-    grid-template-columns: repeat(9,1fr);
- }
- #slider_three div{
-    border: 0px solid;
-}
- #img_slider{
-    height: 77%;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- #img_slider img{
-    border-radius: 50%;
-    height: 70%;
-    width: 70%;
- }
- #img_title{
-    height: 20%;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
- /* Grocery Div */
- #Grocery_slider_div{
-    width: 90%;
-    margin: auto;
-    height: 550px;
-    border: 0px solid red;
-    margin-top: 10px;
- }
- #Grocery_slider_div_headers{
-    height: 13%;
-    border: 0px solid;
-    text-align: center;
- }
- #Grocery_slider_div_sliders{
-    height: 83%;
-    border: 0px solid;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 8px;
-    border: 0px solid;
- }
- #grocery_div_sli{
-    display: flex;
-    flex-direction: column;
-    border: 0px solid blue;
- }
- #slider_pic{
-    border: 0px solid;
-    height: 85%;
- }
- #slider_pic img{
-    width: 80%;
-    height: 80%;
- }
- #slider_title{
-    border: 0px solid green;
-    height: 15%;
-    text-align: center;
- }
- /* jwellary Div */
- #jwellary_slider_div{
-    width: 90%;
-    margin: auto;
-    margin-top: 100px;
-    height: 550px;
-    border: 0px solid red;
-    margin-top: 10px;
- }
-
- /* About */
- .about{
-    width: 90%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
- }
- ._2joD{
-    color: grey;
- }
- /* Help And contact */
- #help_about{
-    height: 250px;
-    width: 90%;
-    margin: auto;
-    border: 0px solid red;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 5px;
-    text-align: center;
-}
-#help_child_div{
-    border: 0px solid;
-    display: flex;
-    flex-direction: column;
-}
-#help_icon{
-    height: 25%;
     border: 0px solid;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#help_title{
-    color: gray;
-    height: 25%;
-    border: 0px solid;
-}
-#help_para{
-    color: gray;
-    height: 50%;
-    border: 0px solid;
 }
 .fa-solid {
     color: gray;
 }
+
+/* Navbar ends */
+
 
 /* Footer Div */
 #footer_div{
