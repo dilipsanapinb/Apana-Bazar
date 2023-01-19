@@ -1,7 +1,7 @@
 const express=require("express");
 require('dotenv').config();
 const {connection}=require("./config/db")
-const {carRouter}=require("./routes/car.route");
+const {productRouter}=require("./routes/product.route.js");
 const {UserModel, userRouter}=require("./routes/user.route");
 const {authenticate}=require("./middlewares/authenticate.middleware");
 const cors = require('cors')
@@ -13,15 +13,13 @@ app.use(cors({
     origin:"*"
 }))
 //routes
-app.use('/user',userRouter)
-app.use(authenticate)
-app.use("/car",carRouter);
-
-
-
 app.get("/",(req,res)=>{
     res.send("Welcome to Home Page")
 })
+app.use('/user',userRouter)
+app.use(authenticate)
+app.use('/product',productRouter);
+
 
 //port
 app.listen(process.env.port,async()=>{

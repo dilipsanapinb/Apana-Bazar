@@ -1,0 +1,70 @@
+*{
+    font-family: sans-serif;
+}
+#container{
+    border: 0px solid ;
+    border-radius: 10px;
+    width: 35%;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#register{
+    width: 90%;
+    border: 0px solid red;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: teal;
+}
+#register form {
+    border: 0px solid;
+    width: 90%;
+    margin: auto;
+}
+#container form p{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.input_tag{
+    border-radius: 6px;
+    border: 1px solid grey;
+    height: 25px;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#signup_btn{
+    width:40%;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0px;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+
+#join_us_btn{
+    border-radius: 6px;
+    border: 0px;
+    width: 30%;
+    height: 30px;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+hr{
+    width: 70%;
+    height: 3px;
+    background-color: teal;
+}

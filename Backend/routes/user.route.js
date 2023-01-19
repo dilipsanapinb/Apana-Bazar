@@ -20,13 +20,13 @@ userRouter.get("/",async(req,res)=>{
 
 //POST
 userRouter.post("/register",async(req,res)=>{
-    const {name,email,pass,age}=req.body;
+    const {firstname,lastname,email,pass,gender}=req.body;
     try {
         bcrypt.hash(pass,5, async(err, hash)=> {
             if(err){
                 console.log(err);
             }else{
-                const user=new UserModel({name,email,pass:hash,age});
+                const user=new UserModel({firstname,lastname,email,pass:hash,gender});
                 await user.save()
                 res.send("Sign Up is sucessfull");
                 console.log(user);
