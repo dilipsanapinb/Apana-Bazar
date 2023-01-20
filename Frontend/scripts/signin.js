@@ -30,11 +30,17 @@ async function logfunct(event){
             let token=data.token
             localStorage.setItem("token",token)
             alert("Log in Successfull");
-            window.location.href="product.html"
+            window.location.href="products.html"
         }else{
             alert("User is Not Found")
         }
     } catch (error) {
         console.log(error);
     }
+}
+
+// connect_link
+let connect_link=document.getElementById("join_us_btn");
+connect_link.onclick=()=>{
+    window.location.href="signup.html"
 }

@@ -19,12 +19,12 @@ productRouter.get("/",async(req,res)=>{
 productRouter.post("/add",async(req,res)=>{
     const payload=req.body;
     try {
-        const newproduct=new ProductModel(payload);
-        await newproduct.save();
-        res.send("new car added to Database")
+        const newproduct=ProductModel.insertMany(payload);
+        //await newproduct.save();
+        res.send("new product added to Database")
         console.log(newproduct)
     } catch (error) {
-        res.send("err:not able to post the data of car");
+        res.send("err:not able to post the data of Product");
         console.log(error);
     }
 })
@@ -36,7 +36,7 @@ productRouter.patch("/update/:id",async(req,res)=>{
     const payload=req.body;
     try {
         await ProductModel.findByIdAndUpdate({_id:id},payload);
-        res.send("new car updated to Database")
+        res.send("new product updated to Database")
     } catch (error) {
         res.send("err:not able to update the data of car");
         console.log(error);
@@ -49,7 +49,7 @@ productRouter.delete("/delete/:id",async(req,res)=>{
     let id=req.params.id
     try {
         await ProductModel.findByIdAndDelete({_id:id});
-        res.send(" car deleted from Database")
+        res.send(" product deleted from Database")
     } catch (error) {
         res.send("err:not able to delete the data of car");
         console.log(error);

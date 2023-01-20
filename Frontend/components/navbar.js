@@ -36,7 +36,8 @@ const navbar=()=>{
                 <div id="btn3_div">
                     <button id="btn3"><p id="admin_name">My Account</p></button>
                     <div class="dropdown-content">
-                    <button id="login_page">Login</button>
+                    <button id="signup_page">Register</button>
+                    <button id="login_page">Log In</button>
                     <button id="admin_login">Admin Login</button>
                     <button id="admin_logout">Logout</button>
                     </div>
