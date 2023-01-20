@@ -30,7 +30,7 @@ async function logfunct(event){
             let token=data.token
             localStorage.setItem("token",token)
             alert("Log in Successfull");
-            window.location.href="product.html"
+            window.location.href="products.html"
         }else{
             alert("User is Not Found")
         }

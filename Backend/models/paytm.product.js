@@ -1,11 +1,12 @@
 const mongoose=require("mongoose");
 
 const productSchema=mongoose.Schema({
-    name:String,
-    model:String,
-    brand:String,
-    price:Number,
-    userID:String
+brand:String,
+name:String,
+price:String,
+strike_price:String,
+discount:String,
+image_url:String,
 
 })
 
