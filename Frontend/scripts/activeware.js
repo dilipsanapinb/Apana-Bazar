@@ -81,23 +81,26 @@ let card=({brand,name,image_url,discount,strike_price,price})=>{
     let about=el('h4')
     about.innerText=name;
     let Price=el('h3')
-    Price.innerHTML=`Rs. ${price}`
+    Price.innerText=price
     Price.setAttribute('id','price_tag')
     let off_price=el('p');
     off_price.innerText=discount
     let strike_Price=el('p');
-    strike_Price.innerText=`Rs.${strike_price}`;
+    strike_Price.innerText=strike_price;
     strike_Price.setAttribute('id','strike')
+    // rating=el('img');
+    // rating.src=el.rating;
+    // rating.setAttribute('id','rating')
+    // let ratingNumber=el('p')
+    // ratingNumber.innerText=el.ratingNumber;
+    // ratingNumber.setAttribute('id','setAtrr')
     let btn=el("button")
     btn.innerText="Quick View"
     btn.setAttribute('id','button_cart');
     btn.addEventListener('click',function(){
-        let productObj={
-            brand,name,image_url,discount,strike_price,price
-        }
-    localStorage.setItem("product",JSON.stringify(productObj));
-    window.location.href="details.html"
-    })
+    buyProduct(el);
+    
+    });
     details_div_products.append(b,about,Price,strike_Price,off_price,btn)
     div.append(image_div,details_div_products);
     return div
@@ -120,49 +123,4 @@ let card=({brand,name,image_url,discount,strike_price,price})=>{
 let activ_btn=document.getElementById("butt2");
 activ_btn.onclick=()=>{
     window.location.href="activeware.html"
-}
-
-
-
-// const buyProduct=async()=>{
-//     try {
-//         let res=await fetch("http://localhost:3500/product",{
-//             method:"GET",
-//             headers:{
-//                 "Content-Type":"application/json",
-//                 Authorization:`${localStorage.getItem("token")}`
-//             }
-//         })
-//         if(res.ok){
-//             let data=await res.json();
-//             data.filter((el)=>{
-//                 console.log(el)
-//             })
-//         }
-//     } catch (error) {
-//         console.log();({"err":"Not able to fetch data"});
-//         console.log(error);
-//     }
-// }
-
-
-const buyProduct=async()=>{
-    // try {
-    //     let res=await fetch("http://localhost:3500/product",{
-    //         method:"GET",
-    //         headers:{
-    //             "Content-Type":"application/json",
-    //             Authorization:`${localStorage.getItem("token")}`
-    //         }
-    //     })
-    //     if(res.ok){
-    //         let data=await res.json();
-    //         data.filter((el)=>{
-    //             console.log(el)
-    //         })
-    //     }
-    // } catch (error) {
-    //     console.log();({"err":"Not able to fetch data"});
-    //     console.log(error);
-    // }
 }

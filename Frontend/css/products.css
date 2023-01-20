@@ -135,6 +135,7 @@ svg:not(:root) {
     height: 450px;
     border: 1px solid;
     margin-bottom: 15px;
+    width: 100%;
 }
 #top_carausel_div img{
     height: 100%;
@@ -342,6 +343,7 @@ strong {
     font-size: 16px;
     color: #807d7d;
 }
+
 .mens_btn>button:hover{
     text-decoration: underline;
 }
@@ -406,6 +408,11 @@ option {
     row-gap: 20px;
     column-gap: 20px;
     padding-left: 30px;
+}
+#products_main_div:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+
 }
 #product_img_pay{
     /* height: 300px; */
