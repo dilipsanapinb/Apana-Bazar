@@ -1,29 +1,41 @@
+*{
+    font-family: sans-serif;
+}
 #top_cont{
-    border: 2px solid;
+    border: 0px solid;
     height: 500px;
     display:flex;
     justify-content: center;
     align-items: center;
     
 }
+#chart{
+    margin-left: 10px;
+    font-size: 13px;
+    color: orangered;
+}
 #product_div{
     width: 90%;
     height: 90%;
-    border: 2px solid red;
+    border: 0px solid red;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #products_img{
-    border: 2px solid purple;
+    border: 0px solid purple;
     width: 40%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 #prod_img_centre{
-    border: 2px solid red;
+    border: 0px solid red;
     width: 80%;
     height: 80%;
+    border-radius: 10px;
+}
+#prod_img_centre:hover{
+    transform: scale(1.09);
 }
 #prod_img_centre img{
     width: 100%;
@@ -31,35 +43,143 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+}
+#title_div{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    color: gray;
+}
+#title_div div{
+    border: 0px solid ;
 }
 #products_details{
-    border: 2px solid ;
+    border: 0px solid ;
     width: 60%;
     display: flex;
     flex-direction: column;
 }
 
 #products_details_1{
-    border: 1px solid red;
-    height: 70%;
+    border: 0px solid red;
+    height: 60%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 #products_details_1_centre{
-    border: 2px solid green;
+    border: 0px solid green;
     width: 80%;
     height: 80%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+#price_details_div{
+    border: 0px solid orchid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+#price_div{
+border: 0px solid red;
+width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(37, 35, 35);
+}
+#title_1{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+#title_2{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+#strike_price_div{
+    border: 0px solid green ;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: line-through;
+}
+#discount_div{
+border: 0px solid blue;
+width: 15%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: green;
 }
 #products_details_2{
-    border: 1px solid blue;
-    height: 30%;
+    border: 0px solid blue;
+    height: 40%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 #products_details_2_centre{
-    border: 2px solid green;
+    border: 0px solid green;
     width: 80%;
     height: 80%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
 }
+#size_div{
+    border: 0px solid red;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+#size_chart_div{
+    border: 0px solid yellowgreen;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#size_chart_div_btns{
+    width: 80%;
+    border: 0px solid green;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#size_chart_div_btns button{
+    border: 1px solid grey;
+    border-radius: 8px;
+    background: transparent;
+    color: gray;
+}
+#size_chart_div_btns button:hover{
+    cursor: pointer;
+}
+#size_chart_div_btns button:hover{
+    background-color: orangered;
+    color: white;
+}
+#order_btn{
+    width: 80%;
+    height: 80%;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+#order_btn:hover{
+    cursor: pointer;
+}
+#prod_det_div_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
