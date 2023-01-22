@@ -15,11 +15,6 @@ import {navbar,footer} from "../components/navbar.js"
  img.src=data.image_url;
  product_img.append(img)
 
-
-//  product details
-//let product_details=document.getElementById("products_details_1_centre");
-//product_details.innerHTML=null;
-//brand div
 let brand=document.createElement("h2");
 brand.innerText=data.brand;
 let b_div=document.getElementById("title_1");
@@ -44,9 +39,53 @@ let strike_price=document.createElement('h5');
 strike_price.innerText=`MRP${data.strike_price}`;
 let strike_div=document.getElementById('strike_price_div');
 strike_div.append(strike_price)
-//product_details.append(brand,name,price,discount,strike_price)
-//let para=document.getElementById('details_para');
-//para.append(product_details)
 
+//
 let order_btn=document.getElementById("order_btn");
 order_btn.innerHTML=`Buy Now Rs.${data.price}  ${data.discount}`
+
+order_btn.onclick=()=>{
+    saveToDB();
+
+}
+const saveToDB=async()=>{
+
+    try {
+        let data=JSON.parse(localStorage.getItem("product"));
+        let cartObj={
+            brand:data.brand,
+            name:data.name,
+            price:data.price,
+            strike_price:data.strike_price,
+            discount:data.discount,
+            image_url:data.image_url,
+            //userID:data.userID
+        }
+        let res=await fetch("https://real-pink-pelican-boot.cyclic.app/cart/add",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+                 Authorization:`${localStorage.getItem("token")}`
+
+            },
+            body:JSON.stringify(cartObj)
+        })
+        if(res.ok){
+            alert("product added to cart");
+            window.location.href="cart.html"
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+// navbat total price
+let nav_cart_total=document.getElementById("myCartPrice");
+let total_price=localStorage.getItem("totalPrice")
+nav_cart_total.innerText=`${total_price}`
+
+// localstorage data length
+let d_length=localStorage.getItem("dataLengtn");
+let total_count=document.querySelector(".cart-quantity");
+            total_count.innerHTML=d_length

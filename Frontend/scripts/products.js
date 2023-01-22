@@ -37,7 +37,7 @@ import {navbar,footer} from "../components/navbar.js"
 
 const getData=async()=>{
     try {
-        let res=await fetch("http://localhost:3500/product",{
+        let res=await fetch("https://real-pink-pelican-boot.cyclic.app/product",{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -89,6 +89,7 @@ let card=({brand,name,image_url,discount,strike_price,price})=>{
     strike_Price.innerText=`Rs.${strike_price}`;
     strike_Price.setAttribute('id','strike')
     let btn=el("button")
+    btn.style.borderRadius=("5px")
     btn.innerText="Quick View"
     btn.setAttribute('id','button_cart');
     btn.addEventListener('click',function(){
@@ -124,45 +125,19 @@ activ_btn.onclick=()=>{
 
 
 
-// const buyProduct=async()=>{
-//     try {
-//         let res=await fetch("http://localhost:3500/product",{
-//             method:"GET",
-//             headers:{
-//                 "Content-Type":"application/json",
-//                 Authorization:`${localStorage.getItem("token")}`
-//             }
-//         })
-//         if(res.ok){
-//             let data=await res.json();
-//             data.filter((el)=>{
-//                 console.log(el)
-//             })
-//         }
-//     } catch (error) {
-//         console.log();({"err":"Not able to fetch data"});
-//         console.log(error);
-//     }
-// }
 
 
-const buyProduct=async()=>{
-    // try {
-    //     let res=await fetch("http://localhost:3500/product",{
-    //         method:"GET",
-    //         headers:{
-    //             "Content-Type":"application/json",
-    //             Authorization:`${localStorage.getItem("token")}`
-    //         }
-    //     })
-    //     if(res.ok){
-    //         let data=await res.json();
-    //         data.filter((el)=>{
-    //             console.log(el)
-    //         })
-    //     }
-    // } catch (error) {
-    //     console.log();({"err":"Not able to fetch data"});
-    //     console.log(error);
-    // }
-}
+// navbat total price
+let nav_cart_total=document.getElementById("myCartPrice");
+let total_price=localStorage.getItem("totalPrice")
+nav_cart_total.innerText=`${total_price}`
+
+// localstorage data length
+let d_length=localStorage.getItem("dataLengtn");
+let total_count=document.querySelector(".cart-quantity");
+            total_count.innerHTML=d_length
+
+//user name on navabar
+let user_name=localStorage.getItem("username");
+let regName=document.getElementById("admin_name");
+regName.innerText=user_name

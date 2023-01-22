@@ -1,0 +1,133 @@
+#container{
+    border: 1px solid;
+    display: flex;
+}
+#product_div{
+    width: 60%;
+    border: 3px solid green;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#product_div div{
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+   
+}
+#product_div div button{
+    border: 1px solid grey;
+    background-color: transparent;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+#cart_total_div{
+    height: 700px;
+    width: 40%;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+
+}
+#cart_total_div h3{
+    text-align: center;
+}
+#address_div{
+    border: 2px solid green;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main_adress_div{
+    width: 60%;
+    height: 90%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 10px;
+   
+
+}
+#address_div form {
+    display: flex;
+    flex-direction: column;
+}
+#address_div form input {
+    height: 20px;
+    width: 90%;
+    border-radius: 6px;
+    border: 1px solid grey;
+}
+#state{
+    margin-top: 10px;
+    width: 40%;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid grey;
+}
+#payment_div{
+    border: 2px solid blueviolet;
+    height: 50%;
+}
+#payment_details{
+    border: 2px solid green;
+    height: 70%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+
+}
+#payment_details div{
+    border: 1px solid red;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#heading h2{
+    color: rgb(223, 191, 15);
+}
+#place_order_btn{
+    border: 2px solid blue;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#odr_btn{
+    width: 60%;
+    height: 60%;
+    background-color: orangered;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
+    border: transparent;
+    font-size: 18px;
+}
+#cont_shop{
+    width: 30%;
+    height: 30%;
+    background-color: orangered;
+  
+    color: white;
+    border-radius: 10px;
+    border: transparent;
+    font-size: 12px;
+}
+
+#final_price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#final_price h3{
+    background-color: green;
+    color: white;
+    width: 50%;
+    height: 40%;
+    border-radius: 6px;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

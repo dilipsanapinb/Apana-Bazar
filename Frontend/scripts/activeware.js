@@ -37,7 +37,7 @@ import {navbar,footer} from "../components/navbar.js"
 
 const getData=async()=>{
     try {
-        let res=await fetch("http://localhost:3500/product",{
+        let res=await fetch("https://real-pink-pelican-boot.cyclic.app/product",{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -124,3 +124,14 @@ let activ_btn=document.getElementById("butt2");
 activ_btn.onclick=()=>{
     window.location.href="activeware.html"
 }
+
+
+// navbat total price
+let nav_cart_total=document.getElementById("myCartPrice");
+let total_price=localStorage.getItem("totalPrice")
+nav_cart_total.innerText=`${total_price}`
+
+// localstorage data length
+let d_length=localStorage.getItem("dataLengtn");
+let total_count=document.querySelector(".cart-quantity");
+            total_count.innerHTML=d_length

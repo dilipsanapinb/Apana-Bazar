@@ -17,8 +17,8 @@ async function logfunct(event){
             email,
             pass
         };
-        console.log(logobj)
-            let res=await fetch("http://localhost:3500/user/login",{
+        //console.log(logobj)
+            let res=await fetch("https://real-pink-pelican-boot.cyclic.app/user/login",{
             method:"POST",
             headers:{
                 "Content-type":"application/json"
@@ -27,6 +27,7 @@ async function logfunct(event){
         })
         if(res.ok){
             let data=await res.json();
+            localStorage.setItem("username",email)
             let token=data.token
             localStorage.setItem("token",token)
             alert("Log in Successfull");

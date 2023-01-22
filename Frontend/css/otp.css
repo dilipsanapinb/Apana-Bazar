@@ -1,0 +1,45 @@
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#main_card{
+    border: 1px solid grey;
+    width: 30%;
+    height: 200px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+#main_card div{
+    border: 0px solid green;
+}
+#header{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+#otp_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input_div{
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+#burron_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#burron_div button{
+    border: 1px solid grey;
+    border-radius: 5px;
+}

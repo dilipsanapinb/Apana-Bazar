@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <!-- Navabar code -->
+    <div class="navbar">  </div>
+    <div id="container">
+        <div id="product_div"></div>
+        <div id="cart_total_div">
+            <h3>Adress</h3>
+            <div id="address_div">
+                <div id="main_adress_div">
+                    <form action="">
+                        <label for="">Name</label>
+                        <input id="name" type="text" placeholder="Name">
+                        <label for="">Adress Line-1</label>
+                        <input id="address_line1" type="text" placeholder="Line-1">
+                        <label for="">Adress Line-2</label>
+                        <input id="address_line2" type="text" placeholder="Line-2">
+                        <label for="">City</label>
+                        <input id="city" type="text" placeholder="City">
+                        <label for="">Pin Code</label>
+                        <input id="pin_code" type="number" placeholder="Pin Code">
+                        <select id="state" name="" id="">
+                            <option value="">State</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Bengal">Bengal</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chattisgarh">Chattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujrath">Gujrath</option>
+                            <option value="Hariyana">Hariyana</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                        </select>
+                    </form>
+                </div>
+                
+            </div>
+            <div id="payment_div">
+                <div id="payment_details">
+                    <div id="heading">
+                        <h2>Payment Details</h2>
+                    </div>
+                    <div id="final_price">
+                        <h3 id="tatal_products_price">
+
+                        </h3>
+                    </div>
+                </div>
+                <div id="place_order_btn">
+                    <button id="odr_btn"></button>
+                    <button id="cont_shop">Continue Shoping </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer -->
+    <div id="footer_div"></div>
+</body>
+</html>
+<script type="module" src="./scripts/cart.js"></script>

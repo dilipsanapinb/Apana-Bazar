@@ -26,11 +26,12 @@ const navbar=()=>{
             </div>
         </div>
         <div id="order_div">
-            <div id="myorders">
-                <button id="orders_btn"><i class="fa-sharp fa-solid fa-bag-shopping fa-2x"><span></span></i>  My Orders</button>
-            </div>
+        <div class="cart-btn">
+        <i id="cart" class="fas fa-shopping-cart"></i>
+          <span class="cart-quantity">0</span>
+      </div>
             <div id="cart_value">
-                <button id="my_cart_btn"><i class="fa-sharp fa-solid fa-bag-shopping fa-2x"></i> MY CART </button><span id="myCartPrice"><p>&#8377 0.00</p></span>
+                <button id="my_cart_btn"><i class="fa-sharp fa-solid fa-bag-shopping fa-2x"></i> Cart Total </button><span id="myCartPrice"><p>&#8377 0.00</p></span>
             </div>
             <div id="sign_login">
                 <div id="btn3_div">
