@@ -45,6 +45,7 @@ userRouter.post("/login",async(req,res)=>{
     try {
         const user=await UserModel.find({email});
         const hs_pass=user[0].pass;
+        console.log(hs_pass);
         if(user.length>0){
             bcrypt.compare(pass,hs_pass,(err, result)=> {
                 if(result){
@@ -59,7 +60,7 @@ userRouter.post("/login",async(req,res)=>{
         res.send("ERR:Wrong Credentials");
         }
     } catch (error) {
-        res.send("Registration is not successfull");
+        res.send("Login is not successfull");
         console.log(error);
     }
 });

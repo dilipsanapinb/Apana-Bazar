@@ -28,7 +28,7 @@ async function registerFunct(event){
       gender
     };
    
-    let res=await fetch("http://localhost:3500/user/register",{
+    let res=await fetch("https://real-pink-pelican-boot.cyclic.app/user/register",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",

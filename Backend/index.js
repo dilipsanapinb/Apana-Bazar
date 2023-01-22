@@ -2,7 +2,8 @@ const express=require("express");
 require('dotenv').config();
 const {connection}=require("./config/db")
 const {productRouter}=require("./routes/product.route.js");
-const {UserModel, userRouter}=require("./routes/user.route");
+const { userRouter}=require("./routes/user.route");
+const { cartRouter}=require("./routes/cart.route");
 const {authenticate}=require("./middlewares/authenticate.middleware");
 const cors = require('cors')
 const app=express();
@@ -19,6 +20,7 @@ app.get("/",(req,res)=>{
 app.use('/user',userRouter)
 app.use(authenticate)
 app.use('/product',productRouter);
+app.use('/cart',cartRouter)
 
 
 //port

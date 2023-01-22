@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/payment.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="container">
+        <div class="screen flex-center">
+            <!-- <form class="popup flex p-lg"> -->
+                <div class="close-btn pointer flex-center p-sm">
+                <i class="ai-cross"></i>
+                </div>
+                <!-- CARD FORM -->
+                <div class="flex-fill flex-vertical">
+                  <div class="header flex-between flex-vertical-center">
+                    <div class="flex-vertical-center">
+                      <i class="ai-bitcoin-fill size-xl pr-sm f-main-color"></i>
+                      <span class="title">
+                        <strong>Ru</strong><span>Pay</span>
+                      </span>
+                    </div>
+                    <!-- <div class="timer" data-id="timer">
+                      <span>0</span><span>5</span>
+                      <em>:</em>
+                      <span>0</span><span>0</span>
+                    </div> -->
+                  </div>
+                  <div class="card-data flex-fill flex-vertical">
+                    
+                    <!-- Card Number -->
+                    <div class="flex-between flex-vertical-center">
+                      <div class="card-property-title">
+                        <strong>Card Number</strong>
+                        <span>Enter 16-digit card number on the card</span>
+                      </div>
+                      <div class="f-main-color pointer"><i class="ai-pencil"></i> Edit</div>
+                    </div>
+                    
+                    <!-- Card Field -->
+                    <div class="flex-between">
+                      <div class="card-number ">
+                        <div class="card-number-field "">
+ 
+                          <input class="numbers" type="number" min="1" max="9999" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000"  data-def="0000">
+                        </div>
+                        <!-- <i class="ai-circle-check-fill size-lg f-main-color"></i> -->
+                      </div>
+                    </div>
+                    
+                    <!-- Expiry Date -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>Expiry Date</strong>
+                        <span>Enter the expiration date of the card</span>
+                      </div>
+                      <div class="card-property-value flex-vertical-center">
+                        <div class="input-container half-width">
+                          <!-- <input class="numbers"   type="number" min="1" max="12" step="1"  placeholder="MM">   -->
+                          <input type="number" placeholder="Month" >
+                        </div>
+                        <span class="m-md">/</span>
+                        <div class="input-container half-width">
+                          <!-- <input class="numbers"  data-def="01" type="number" min="23" max="99" step="1" placeholder="YY"> -->
+                          <input type="number" placeholder="Year">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- CCV Number -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>CVC Number</strong>
+                        <span>Enter card verification code from the back of the card</span>
+                      </div>
+                      <div class="card-property-value">
+                        <div class="input-container">
+                            <input type="password">
+                          <input id="cvc" type="password">
+                          <i id="cvc_div" ></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Name -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>Cardholder Name</strong>
+                        <span>Enter cardholder's name</span>
+                      </div>
+                      <div class="card-property-value">
+                        <div class="input-container">
+                          <input id="name" data-bound="name_mock" data-def="Mr. Cardholder" type="text" class="uppercase" placeholder="CARDHOLDER NAME">
+                          <i class="ai-person"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="action flex-center">
+                    <button id="pay_now" >Pay Now</button>
+                  </div>
+                </div>
+                <!-- </form> -->
+                </div>
+        </div>
+    <div id="footer_div"></div>
+</body>
+</html>
+<script type="module" src="./scripts/payment.js"></script>

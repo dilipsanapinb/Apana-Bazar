@@ -91,7 +91,8 @@
     align-items: center;
     background: transparent;
     border: 0px;
-    font-weight: bold
+    font-weight: bold;
+    color: grey;
 }
 #my_cart_btn:hover{
     background-color: #DD0285;
