@@ -19,8 +19,8 @@ productRouter.get("/",async(req,res)=>{
 productRouter.post("/add",async(req,res)=>{
     const payload=req.body;
     try {
-        const newproduct=ProductModel.insertMany(payload);
-        //await newproduct.save();
+        const newproduct=new ProductModel(payload);
+        await newproduct.save();
         res.send("new product added to Database")
         console.log(newproduct)
     } catch (error) {
@@ -32,29 +32,50 @@ productRouter.post("/add",async(req,res)=>{
 //PATCH product
 
 productRouter.patch("/update/:id",async(req,res)=>{
-    let id=req.params.id
+    const id=req.params.id;
     const payload=req.body;
+    const product=await ProductModel.findOne({"_id":id});
+    console.log(product)
+    const userID_in_product=product.userID;
+    const userID_making_req=req.body.userID
     try {
-        await ProductModel.findByIdAndUpdate({_id:id},payload);
-        res.send("new product updated to Database")
+        if(userID_making_req!==userID_in_product){
+            res.send({"msg":"You are not authorised"})
+        }else{
+        let data=await ProductModel.findByIdAndUpdate({_id:id},payload);
+        res.send("Note updated successfully");
+        console.log(data)
+        console.log(`Note updated successfully with id:${id}`);
+        }
     } catch (error) {
-        res.send("err:not able to update the data of car");
+        res.send("err:Not able to update product.patch");
         console.log(error);
     }
 })
+
+
 
 //delete product
-
 productRouter.delete("/delete/:id",async(req,res)=>{
-    let id=req.params.id
+    const id=req.params.id;
+    const product=await ProductModel.findOne({"_id":id});
+    console.log(product)
+    const userID_in_product=product.userID;
+    const userID_making_req=req.body.userID
     try {
-        await ProductModel.findByIdAndDelete({_id:id});
-        res.send(" product deleted from Database")
+        if(userID_making_req!==userID_in_product){
+            res.send({"msg":"You are not authorised"})
+        }else{
+        let data=await ProductModel.findByIdAndDelete({_id:id});
+        res.send("product deleted successfully");
+        console.log(`product deleted successfully with id:${id}`);
+        }
     } catch (error) {
-        res.send("err:not able to delete the data of car");
+        res.send("err:Not able to update product.patch");
         console.log(error);
     }
 })
+
 
 module.exports={productRouter}
 

@@ -113,7 +113,7 @@ let card=({brand,name,image_url,discount,strike_price,price,_id})=>{
 
 const removeProduct=async(_id)=>{
 try {
-    let res=await fetch(`https://real-pink-pelican-boot.cyclic.app/delete/${_id}`,{
+    let res=await fetch(`https://real-pink-pelican-boot.cyclic.app/cart/delete/${_id}`,{
         method:"DELETE",
         headers:{
             "Content-Type":"application/json",
