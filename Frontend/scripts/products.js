@@ -141,3 +141,30 @@ let total_count=document.querySelector(".cart-quantity");
 let user_name=localStorage.getItem("username");
 let regName=document.getElementById("admin_name");
 regName.innerText=user_name
+
+
+// ascending and descending order
+let sortDesc=document.getElementById("price-heading1");
+sortDesc.onclick=()=>{
+    sortHL()
+}
+
+let sortHL=async()=>{
+    try {
+        let res=await fetch("https://real-pink-pelican-boot.cyclic.app/product",{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json",
+                Authorization:`${localStorage.getItem("token")}`
+            }
+        })
+        if(res.ok){
+            let data=await res.json();
+            data.sort(function(a, b){return a.price-b.price});
+            renderData(data)
+        }
+    } catch (error) {
+        console.log();({"err":"Not able to fetch data"});
+        console.log(error);
+    }
+}
